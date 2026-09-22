@@ -1,0 +1,29 @@
+{
+  "_comment": "Vehicle scene: what is ahead, is there a person, is the spot dangerous.",
+  "model": "mankei-reflex",
+  "state": {
+    "szene": "Fußgänger 12 m voraus auf der Fahrbahn, quert. Stoppschild in 30 m.",
+    "tempo_kmh": 28,
+    "limit_kmh": 50
+  },
+  "questions": {
+    "lage": {
+      "type": "choice",
+      "instructions": "Was ist die Lage vor dem Fahrzeug?",
+      "criteria": {
+        "freie Fahrt": null,
+        "Person auf oder neben der Fahrbahn": null,
+        "Hindernis auf der Fahrbahn": null,
+        "Gefahr": null
+      }
+    },
+    "person": {
+      "type": "noul",
+      "instructions": "Auf oder neben der Fahrbahn befindet sich eine Person."
+    },
+    "gefaehrlich": {
+      "type": "noul",
+      "instructions": "Die Stelle ist gefährlich für das Fahrzeug oder für Menschen."
+    }
+  }
+}

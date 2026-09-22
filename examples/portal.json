@@ -1,0 +1,77 @@
+{
+  "_comment": "Browser automation: next action and target element on a portal page (accessibility-tree style element table).",
+  "model": "mankei-reflex",
+  "state": {
+    "seite": "Serviceportal · Meine Vorgänge",
+    "auftrag": "Öffne den Reiter mit den offenen Vorgängen.",
+    "elemente": [
+      {
+        "nr": 1,
+        "rolle": "Link",
+        "name": "Startseite"
+      },
+      {
+        "nr": 2,
+        "rolle": "Textfeld",
+        "name": "Suchbegriff",
+        "wert": ""
+      },
+      {
+        "nr": 3,
+        "rolle": "Schaltfläche",
+        "name": "Suche starten"
+      },
+      {
+        "nr": 4,
+        "rolle": "Reiter",
+        "name": "Übersicht"
+      },
+      {
+        "nr": 5,
+        "rolle": "Reiter",
+        "name": "Offene Vorgänge"
+      },
+      {
+        "nr": 6,
+        "rolle": "Reiter",
+        "name": "Abgeschlossen"
+      },
+      {
+        "nr": 7,
+        "rolle": "Auswahl",
+        "name": "Zeitraum"
+      },
+      {
+        "nr": 8,
+        "rolle": "Link",
+        "name": "Impressum"
+      }
+    ]
+  },
+  "questions": {
+    "aktion": {
+      "type": "choice",
+      "instructions": "Welche Aktion bringt den Auftrag als Nächstes voran?",
+      "criteria": {
+        "klicken": null,
+        "tippen": null,
+        "auswählen": null,
+        "nach unten scrollen": null,
+        "warten": null,
+        "fertig": null
+      }
+    },
+    "element": {
+      "type": "choice",
+      "instructions": "Welches Element auf der Seite ist gemeint?",
+      "criteria": {
+        "1: Link „Startseite“": null,
+        "3: Schaltfläche „Suche starten“": null,
+        "4: Reiter „Übersicht“": null,
+        "5: Reiter „Offene Vorgänge“": null,
+        "6: Reiter „Abgeschlossen“": null,
+        "8: Link „Impressum“": null
+      }
+    }
+  }
+}

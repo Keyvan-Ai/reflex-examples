@@ -1,0 +1,35 @@
+{
+  "_comment": "Intent routing for an assistant (MASSIVE-style labels).",
+  "model": "mankei-reflex",
+  "state": {
+    "aeusserung": "stell den wecker auf sieben uhr morgen früh"
+  },
+  "questions": {
+    "absicht": {
+      "type": "choice",
+      "instructions": "Welche Absicht drückt die Äußerung aus?",
+      "criteria": {
+        "alarm_set": null,
+        "alarm_remove": null,
+        "alarm_query": null,
+        "weather_query": null,
+        "calendar_set": null,
+        "play_music": null,
+        "email_sendemail": null,
+        "lists_createoradd": null
+      }
+    },
+    "bereich": {
+      "type": "choice",
+      "instructions": "Zu welchem Bereich gehört die Äußerung?",
+      "criteria": {
+        "alarm": null,
+        "weather": null,
+        "calendar": null,
+        "music": null,
+        "email": null,
+        "lists": null
+      }
+    }
+  }
+}
