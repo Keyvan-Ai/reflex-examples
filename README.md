@@ -78,6 +78,17 @@ Send any of them with:
 curl -s http://127.0.0.1:8088/v1/reflex -H "Content-Type: application/json" --data-binary @examples/fahrzeug.json
 ```
 
+## Many states in one call
+
+`POST /v1/reflex/batch` takes a list of requests and answers them in one forward pass — for example every obstacle ahead of a drone, or several documents at once:
+
+```jsonc
+{ "requests": [ { "state": {…}, "questions": {…} }, { "state": {…}, "questions": {…} } ] }
+// -> { "results": [ { "answers": {…} }, { "answers": {…} } ], "mankei": { "latenz_ms": 40, "anfragen": 2, "fragen": 6 } }
+```
+
+One decision takes about 30 ms on a workstation GPU, five questions about 33 ms, four states with three questions each about 40 ms, one hundred questions in one call about a quarter of a second.
+
 ## Drop-in for Jev clients
 
 Any client that speaks the System One format can point at Reflex instead: set the base URL to `http://<host>:8088` and use `/v1/systemone`. Request and response fields (`choice`, `score`, `noul`, `confidence`, `probabilities`, `usage`) are the same.
